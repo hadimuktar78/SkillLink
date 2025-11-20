@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SkillLink — IT Mentorship Platform</title>
+  <meta name="description" content="SkillLink connects IT students and junior developers with industry mentors. Get a free 15-minute mentor session.">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#00a3ff;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      --radius:14px;
+      --gap:18px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071126 0%, #071b2a 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7af0ff);display:flex;align-items:center;justify-content:center;color:#021022;font-weight:700;font-size:18px}
+    .nav{display:flex;gap:16px;align-items:center}
+    .nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:#021022;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;margin-top:36px}
+    .hero h1{font-size:36px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:var(--accent);color:#021022;padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 16px;border-radius:12px;color:var(--muted);text-decoration:none}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:22px}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .feature .icon{width:44px;height:44px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:800}
+    .how{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .step{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
+    .cta-banner{margin-top:26px;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(0,163,255,0.08), rgba(122,240,255,0.02));display:flex;align-items:center;justify-content:space-between;gap:12px}
+    footer{margin-top:36px;padding:18px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted)}
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; padding-bottom:0}
+      .features{grid-template-columns:1fr}
+      .how{grid-template-columns:1fr}
+      .wrap{padding:18px}
+    }
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--muted)}
+    form input, form select, form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:8px}
+    form .row{display:flex;gap:10px}
+    form .row > *{flex:1}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark">SL</div>
+        <div>
+          <div style="font-weight:800">SkillLink</div>
+          <div style="font-size:12px;color:var(--muted)">IT Mentorship Platform</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a class="cta" href="#signup">Start Free</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div style="display:flex;gap:10px;align-items:center">
+            <div class="pill">Free 15-min session</div>
+            <div class="muted small">Limited for first 200 users</div>
+          </div>
+          <h1>Get mentored by real IT engineers — build projects, pass interviews.</h1>
+          <p>SkillLink connects students and junior developers with Software Engineers, Data Scientists, Cloud & Security experts. Personalized roadmaps, GitHub reviews, and mock interviews — all in one platform.</p>
+          <div class="actions">
+            <a class="btn-primary" href="#signup">Get Free Mentor Session</a>
+            <a class="btn-ghost" href="#how">See How it Works</a>
+          </div>
+
+          <div class="features card" id="features" aria-hidden="false">
+            <div class="feature"><div class="icon">💡</div><div><strong>AI Mentor Matching</strong><div class="muted small">Match by stack & goals</div></div></div>
+            <div class="feature"><div class="icon">🧩</div><div><strong>Project-based Learning</strong><div class="muted small">Real GitHub-worthy projects</div></div></div>
+            <div class="feature"><div class="icon">🗣️</div><div><strong>Mock Interviews</strong><div class="muted small">Tech + system design practice</div></div></div>
+            <div class="feature"><div class="icon">📁</div><div><strong>Portfolio Review</strong><div class="muted small">CV & GitHub feedback</div></div></div>
+          </div>
+
+        </div>
+
+        <aside class="card" style="width:100%;max-width:420px;">
+          <h3 style="margin:0 0 8px">Start your free mentor session</h3>
+          <p class="muted small" style="margin:0 0 12px">Fill this quick form and get matched to an available mentor for a 15-minute call.</p>
+          <form id="signup" onsubmit="handleSubmit(event)">
+            <label class="small">Full name</label>
+            <input id="name" placeholder="Your full name" required />
+            <label class="small">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required />
+            <label class="small">What do you want to become?</label>
+            <select id="goal" required>
+              <option value="">Choose goal</option>
+              <option>Front-end Developer</option>
+              <option>Back-end Developer</option>
+              <option>Data Scientist / ML</option>
+              <option>Cloud Engineer</option>
+              <option>Cybersecurity</option>
+              <option>Other</option>
+            </select>
+            <label class="small">Short message (optional)</label>
+            <textarea id="message" rows="3" placeholder="Tell mentor your main problem..."></textarea>
+
+            <div style="display:flex;gap:8px;margin-top:10px">
+              <button class="btn-primary" type="submit">Get Free Session</button>
+              <button type="button" class="btn-ghost" onclick="document.getElementById('signup').reset()">Reset</button>
+            </div>
+            <div id="formMsg" class="muted small" style="margin-top:10px"></div>
+          </form>
+
+          <div style="margin-top:16px" class="small muted">By signing up you agree to receive emails. We respect your privacy.</div>
+        </aside>
+      </section>
+
+      <section id="how" class="card" style="margin-top:26px">
+        <h2 style="margin-top:0">How SkillLink Works</h2>
+        <div class="how">
+          <div class="step">
+            <strong>1. Tell us your goal</strong>
+            <p class="muted small">Select your specialty and experience level so AI can match you.</p>
+          </div>
+          <div class="step">
+            <strong>2. Get matched</strong>
+            <p class="muted small">AI suggests available mentors with similar tech stacks.</p>
+          </div>
+          <div class="step">
+            <strong>3. Attend session</strong>
+            <p class="muted small">15-min free mentor call to get a roadmap and first tasks.</p>
+          </div>
+          <div class="step">
+            <strong>4. Continue learning</strong>
+            <p class="muted small">Subscribe for mentorship, workshops & hiring support.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:18px">
+        <h2 style="margin-top:0">Why students love SkillLink</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+          <div style="padding:14px;background:rgba(255,255,255,0.02);border-radius:10px">
+            <strong>Real mentors</strong>
+            <div class="muted small">Engineers from industry providing feedback & referrals.</div>
+          </div>
+          <div style="padding:14px;background:rgba(255,255,255,0.02);border-radius:10px">
+            <strong>Project feedback</strong>
+            <div class="muted small">Build work-ready code and portfolio items.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div>
+          <strong style="font-size:18px">Ready to start?</strong>
+          <div class="muted small">Get your free 15-minute mentor consultation now.</div>
+        </div>
+        <div>
+          <a class="btn-primary" href="#signup">Get Free Session</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© 2025 SkillLink — Mentorship for IT careers</div>
+      <div class="muted small">Contact: hadimukhtar102@gmail.com  / +7 747 460 9935
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const goal = document.getElementById('goal').value;
+      const msg = document.getElementById('message').value.trim();
+      const formMsg = document.getElementById('formMsg');
+      if(!name || !email || !goal){ formMsg.textContent = 'Please complete required fields.'; return; }
+      // Simulate submission — create mailto link so user can test locally
+      const subject = encodeURIComponent('SkillLink - Free Mentor Request ('+goal+')');
+      const body = encodeURIComponent('Name: '+name+'\\nEmail: '+email+'\\nGoal: '+goal+'\\nMessage: '+msg);
+      formMsg.textContent = 'Thanks! A mentor will contact you soon. (Simulated)';
+      // fallback: open mailto so it works without backend
+      setTimeout(()=>{ window.location.href = 'mailto:hadimukhtar102@gmail.com?subject='+subject+'&body='+body },800);
+    }
+  </script>
+</body>
+</html>
